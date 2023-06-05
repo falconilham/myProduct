@@ -12,8 +12,6 @@ The project follows the following folder structure:
   - `routes`: Contains the route files that define the API endpoints.
   - `utils`: Contains utility files that provide helper functions or modules.
 
-- `uploads`: Used to store uploaded files.
-
 ## Package.json
 
 The project includes the following dependencies:
