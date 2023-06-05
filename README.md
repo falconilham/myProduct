@@ -1,4 +1,4 @@
-# mobilku
+# myProduct
 
 This is a sample project for a backend application using Express and MongoDB.
 
