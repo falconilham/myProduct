@@ -1,5 +1,6 @@
 const express = require('express');
 const connectDB = require('./config/db');
+const bodyParser = require('body-parser');
 const app = express();
 const productRoutes = require('./src/routes/productRoutes');
 
@@ -7,6 +8,9 @@ const productRoutes = require('./src/routes/productRoutes');
 
 // Connect to the MongoDB database
 connectDB();
+
+app.use(bodyParser.urlencoded({ extended: false })); // Parse URL-encoded bodies
+app.use(bodyParser.json()); // Parse JSON bodies
 
 app.use('/api', productRoutes);
 

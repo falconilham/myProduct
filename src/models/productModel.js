@@ -16,6 +16,10 @@ const productSchema = new mongoose.Schema({
   image1000: {
     type: String,
     required: true
+  },
+  price: {
+    type: Number,
+    required: true
   }
 });
 
