@@ -7,6 +7,7 @@ const DB_URI_CLOUD = `mongodb+srv://myProduct:4CEPqgadCw4ioueh@cluster0.7j1u2jh.
 const connectDB = async () => {
   try {
     const usedDB = process.env.NODE_ENV === "production" ? DB_URI_CLOUD : DB_URI
+    console.log({usedDB})
     await mongoose.connect(usedDB, {
       dbName: 'mydatabase',
       useNewUrlParser: true,
