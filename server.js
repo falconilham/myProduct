@@ -1,6 +1,8 @@
 const express = require('express');
 const connectDB = require('./src/config/db');
 const bodyParser = require('body-parser');
+const serverless = require('serverless-http');
+
 const app = express();
 const productRoutes = require('./src/routes/productRoutes');
 
@@ -18,3 +20,5 @@ app.use('/api', productRoutes);
 app.listen(7000, () => {
   console.log('Server is running on port 7000');
 });
+
+module.exports.handler = serverless(app);
