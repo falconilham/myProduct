@@ -8,7 +8,7 @@ const connectDB = async () => {
   try {
     const usedDB = process.env.NODE_ENV === "production" ? DB_URI_CLOUD : DB_URI
     console.log({usedDB, nodeENV: process.env.NODE_ENV})
-    await mongoose.connect(usedDB, {
+    await mongoose.connect(DB_URI_CLOUD, {
       dbName: 'mydatabase',
       useNewUrlParser: true,
       useUnifiedTopology: true,
